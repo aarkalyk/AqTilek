@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		793B85941BF11DA700D18B74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85931BF11DA700D18B74 /* main.m */; };
+		793B85971BF11DA700D18B74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85961BF11DA700D18B74 /* AppDelegate.m */; };
+		793B859A1BF11DA700D18B74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85991BF11DA700D18B74 /* ViewController.m */; };
+		793B859D1BF11DA700D18B74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 793B859B1BF11DA700D18B74 /* Main.storyboard */; };
+		793B85A01BF11DA700D18B74 /* AkTilek.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 793B859E1BF11DA700D18B74 /* AkTilek.xcdatamodeld */; };
+		793B85A21BF11DA700D18B74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 793B85A11BF11DA700D18B74 /* Assets.xcassets */; };
+		793B85A51BF11DA700D18B74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 793B85A31BF11DA700D18B74 /* LaunchScreen.storyboard */; };
+		793B85B01BF11DA700D18B74 /* AkTilekTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85AF1BF11DA700D18B74 /* AkTilekTests.m */; };
+		793B85BB1BF11DA700D18B74 /* AkTilekUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85BA1BF11DA700D18B74 /* AkTilekUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		793B85AC1BF11DA700D18B74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 793B85871BF11DA700D18B74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 793B858E1BF11DA700D18B74;
+			remoteInfo = AkTilek;
+		};
+		793B85B71BF11DA700D18B74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 793B85871BF11DA700D18B74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 793B858E1BF11DA700D18B74;
+			remoteInfo = AkTilek;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		793B858F1BF11DA700D18B74 /* AkTilek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkTilek.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		793B85931BF11DA700D18B74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		793B85951BF11DA700D18B74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		793B85961BF11DA700D18B74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		793B85981BF11DA700D18B74 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		793B85991BF11DA700D18B74 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		793B859C1BF11DA700D18B74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		793B859F1BF11DA700D18B74 /* AkTilek.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AkTilek.xcdatamodel; sourceTree = "<group>"; };
+		793B85A11BF11DA700D18B74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		793B85A41BF11DA700D18B74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		793B85A61BF11DA700D18B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		793B85AB1BF11DA700D18B74 /* AkTilekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkTilekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		793B85AF1BF11DA700D18B74 /* AkTilekTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AkTilekTests.m; sourceTree = "<group>"; };
+		793B85B11BF11DA700D18B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		793B85B61BF11DA700D18B74 /* AkTilekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkTilekUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		793B85BA1BF11DA700D18B74 /* AkTilekUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AkTilekUITests.m; sourceTree = "<group>"; };
+		793B85BC1BF11DA700D18B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		793B858C1BF11DA700D18B74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793B85A81BF11DA700D18B74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793B85B31BF11DA700D18B74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		793B85861BF11DA700D18B74 = {
+			isa = PBXGroup;
+			children = (
+				793B85911BF11DA700D18B74 /* AkTilek */,
+				793B85AE1BF11DA700D18B74 /* AkTilekTests */,
+				793B85B91BF11DA700D18B74 /* AkTilekUITests */,
+				793B85901BF11DA700D18B74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		793B85901BF11DA700D18B74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				793B858F1BF11DA700D18B74 /* AkTilek.app */,
+				793B85AB1BF11DA700D18B74 /* AkTilekTests.xctest */,
+				793B85B61BF11DA700D18B74 /* AkTilekUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		793B85911BF11DA700D18B74 /* AkTilek */ = {
+			isa = PBXGroup;
+			children = (
+				793B85951BF11DA700D18B74 /* AppDelegate.h */,
+				793B85961BF11DA700D18B74 /* AppDelegate.m */,
+				793B85981BF11DA700D18B74 /* ViewController.h */,
+				793B85991BF11DA700D18B74 /* ViewController.m */,
+				793B859B1BF11DA700D18B74 /* Main.storyboard */,
+				793B85A11BF11DA700D18B74 /* Assets.xcassets */,
+				793B85A31BF11DA700D18B74 /* LaunchScreen.storyboard */,
+				793B85A61BF11DA700D18B74 /* Info.plist */,
+				793B859E1BF11DA700D18B74 /* AkTilek.xcdatamodeld */,
+				793B85921BF11DA700D18B74 /* Supporting Files */,
+			);
+			path = AkTilek;
+			sourceTree = "<group>";
+		};
+		793B85921BF11DA700D18B74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				793B85931BF11DA700D18B74 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		793B85AE1BF11DA700D18B74 /* AkTilekTests */ = {
+			isa = PBXGroup;
+			children = (
+				793B85AF1BF11DA700D18B74 /* AkTilekTests.m */,
+				793B85B11BF11DA700D18B74 /* Info.plist */,
+			);
+			path = AkTilekTests;
+			sourceTree = "<group>";
+		};
+		793B85B91BF11DA700D18B74 /* AkTilekUITests */ = {
+			isa = PBXGroup;
+			children = (
+				793B85BA1BF11DA700D18B74 /* AkTilekUITests.m */,
+				793B85BC1BF11DA700D18B74 /* Info.plist */,
+			);
+			path = AkTilekUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		793B858E1BF11DA700D18B74 /* AkTilek */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 793B85BF1BF11DA700D18B74 /* Build configuration list for PBXNativeTarget "AkTilek" */;
+			buildPhases = (
+				793B858B1BF11DA700D18B74 /* Sources */,
+				793B858C1BF11DA700D18B74 /* Frameworks */,
+				793B858D1BF11DA700D18B74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AkTilek;
+			productName = AkTilek;
+			productReference = 793B858F1BF11DA700D18B74 /* AkTilek.app */;
+			productType = "com.apple.product-type.application";
+		};
+		793B85AA1BF11DA700D18B74 /* AkTilekTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 793B85C21BF11DA700D18B74 /* Build configuration list for PBXNativeTarget "AkTilekTests" */;
+			buildPhases = (
+				793B85A71BF11DA700D18B74 /* Sources */,
+				793B85A81BF11DA700D18B74 /* Frameworks */,
+				793B85A91BF11DA700D18B74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				793B85AD1BF11DA700D18B74 /* PBXTargetDependency */,
+			);
+			name = AkTilekTests;
+			productName = AkTilekTests;
+			productReference = 793B85AB1BF11DA700D18B74 /* AkTilekTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		793B85B51BF11DA700D18B74 /* AkTilekUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 793B85C51BF11DA700D18B74 /* Build configuration list for PBXNativeTarget "AkTilekUITests" */;
+			buildPhases = (
+				793B85B21BF11DA700D18B74 /* Sources */,
+				793B85B31BF11DA700D18B74 /* Frameworks */,
+				793B85B41BF11DA700D18B74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				793B85B81BF11DA700D18B74 /* PBXTargetDependency */,
+			);
+			name = AkTilekUITests;
+			productName = AkTilekUITests;
+			productReference = 793B85B61BF11DA700D18B74 /* AkTilekUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		793B85871BF11DA700D18B74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = GrownApps;
+				TargetAttributes = {
+					793B858E1BF11DA700D18B74 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					793B85AA1BF11DA700D18B74 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 793B858E1BF11DA700D18B74;
+					};
+					793B85B51BF11DA700D18B74 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 793B858E1BF11DA700D18B74;
+					};
+				};
+			};
+			buildConfigurationList = 793B858A1BF11DA700D18B74 /* Build configuration list for PBXProject "AkTilek" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 793B85861BF11DA700D18B74;
+			productRefGroup = 793B85901BF11DA700D18B74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				793B858E1BF11DA700D18B74 /* AkTilek */,
+				793B85AA1BF11DA700D18B74 /* AkTilekTests */,
+				793B85B51BF11DA700D18B74 /* AkTilekUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		793B858D1BF11DA700D18B74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793B85A51BF11DA700D18B74 /* LaunchScreen.storyboard in Resources */,
+				793B85A21BF11DA700D18B74 /* Assets.xcassets in Resources */,
+				793B859D1BF11DA700D18B74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793B85A91BF11DA700D18B74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793B85B41BF11DA700D18B74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		793B858B1BF11DA700D18B74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793B859A1BF11DA700D18B74 /* ViewController.m in Sources */,
+				793B85A01BF11DA700D18B74 /* AkTilek.xcdatamodeld in Sources */,
+				793B85971BF11DA700D18B74 /* AppDelegate.m in Sources */,
+				793B85941BF11DA700D18B74 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793B85A71BF11DA700D18B74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793B85B01BF11DA700D18B74 /* AkTilekTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793B85B21BF11DA700D18B74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793B85BB1BF11DA700D18B74 /* AkTilekUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		793B85AD1BF11DA700D18B74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 793B858E1BF11DA700D18B74 /* AkTilek */;
+			targetProxy = 793B85AC1BF11DA700D18B74 /* PBXContainerItemProxy */;
+		};
+		793B85B81BF11DA700D18B74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 793B858E1BF11DA700D18B74 /* AkTilek */;
+			targetProxy = 793B85B71BF11DA700D18B74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		793B859B1BF11DA700D18B74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				793B859C1BF11DA700D18B74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		793B85A31BF11DA700D18B74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				793B85A41BF11DA700D18B74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		793B85BD1BF11DA700D18B74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		793B85BE1BF11DA700D18B74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		793B85C01BF11DA700D18B74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AkTilek/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grownapps.AkTilek;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		793B85C11BF11DA700D18B74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AkTilek/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grownapps.AkTilek;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		793B85C31BF11DA700D18B74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AkTilekTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grownapps.AkTilekTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AkTilek.app/AkTilek";
+			};
+			name = Debug;
+		};
+		793B85C41BF11DA700D18B74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AkTilekTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grownapps.AkTilekTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AkTilek.app/AkTilek";
+			};
+			name = Release;
+		};
+		793B85C61BF11DA700D18B74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AkTilekUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grownapps.AkTilekUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AkTilek;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		793B85C71BF11DA700D18B74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AkTilekUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grownapps.AkTilekUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AkTilek;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		793B858A1BF11DA700D18B74 /* Build configuration list for PBXProject "AkTilek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				793B85BD1BF11DA700D18B74 /* Debug */,
+				793B85BE1BF11DA700D18B74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		793B85BF1BF11DA700D18B74 /* Build configuration list for PBXNativeTarget "AkTilek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				793B85C01BF11DA700D18B74 /* Debug */,
+				793B85C11BF11DA700D18B74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		793B85C21BF11DA700D18B74 /* Build configuration list for PBXNativeTarget "AkTilekTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				793B85C31BF11DA700D18B74 /* Debug */,
+				793B85C41BF11DA700D18B74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		793B85C51BF11DA700D18B74 /* Build configuration list for PBXNativeTarget "AkTilekUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				793B85C61BF11DA700D18B74 /* Debug */,
+				793B85C71BF11DA700D18B74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		793B859E1BF11DA700D18B74 /* AkTilek.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				793B859F1BF11DA700D18B74 /* AkTilek.xcdatamodel */,
+			);
+			currentVersion = 793B859F1BF11DA700D18B74 /* AkTilek.xcdatamodel */;
+			path = AkTilek.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 793B85871BF11DA700D18B74 /* Project object */;
+}
