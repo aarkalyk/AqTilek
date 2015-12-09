@@ -37,7 +37,7 @@
     [super viewDidLoad];
     
     //setting up the backgound
-    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
     backgroundView.image = [UIImage imageNamed:@"tilekBackground.png"];
     [self.view insertSubview:backgroundView atIndex:0];
     //end
@@ -111,7 +111,28 @@
                     [object pinInBackground];
                 }
             }
-            [self updateLocalData];
+            for (int i = 1; i < (int)self.mainArray.count; i++) {
+                BOOL exists = NO;
+                for (int j = 0; j < (int)self.onlineBatalar.count; j++) {
+                    NSString *localName = self.mainArray[i];
+                    NSString *onlineName = self.onlineBatalar[j];
+                    if ([localName isEqualToString:onlineName]) {
+                        exists = YES;
+                        break;
+                    }
+                }
+                if (!exists) {
+                    for (PFObject *object in objects) {
+                        NSString *nameEng = self.mainArray[i];
+                        if ([nameEng isEqualToString:object[@"nameEng"]]) {
+                            [object unpinInBackground];
+                        }
+                    }
+                    [self.mainArray removeObjectAtIndex:i];
+                    [self.mainArrayKaz removeObjectAtIndex:i];
+                }
+            }
+            [self.collectionView reloadData];
         }else{
             NSLog(@"%@", error);
         }
@@ -136,24 +157,6 @@
     }];
 }
 
--(void)updateLocalData{
-    for (int i = 1; i < (int)self.mainArray.count; i++) {
-        BOOL exists = NO;
-        for (int j = 0; j < (int)self.onlineBatalar.count; j++) {
-            NSString *localName = self.mainArray[i];
-            NSString *onlineName = self.onlineBatalar[j];
-            if ([localName isEqualToString:onlineName]) {
-                exists = YES;
-                break;
-            }
-        }
-        if (!exists) {
-            [self.mainArray removeObjectAtIndex:i];
-            [self.mainArrayKaz removeObjectAtIndex:i];
-        }
-    }
-    [self.collectionView reloadData];
-}
 
 #pragma mark - CollectionView delegate
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

@@ -17,6 +17,7 @@
 @property (nonatomic) NSMutableArray *likedTilekterDescr;
 @property (nonatomic) UIColor *customPurple;
 @property (nonatomic) Tilek *tilek;
+@property (nonatomic) UILabel *placeHolderText;
 
 @end
 
@@ -25,21 +26,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.placeHolderText = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame)/2, CGRectGetWidth(self.view.frame)-50, 30)];
+    
     self.customPurple = [UIColor colorWithRed:209/255.0 green:138/255.0 blue:206/255.0 alpha:0.7];
     
     //setting up the backgound
-    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
     backgroundView.image = [UIImage imageNamed:@"tilekBackground.png"];
     [self.view insertSubview:backgroundView atIndex:0];
     //end
     
-    [self.navigationItem setTitle:@"Likes"];
+    [self.navigationItem setTitle:@"Ұнатқан тілектеріңіз"];
     //getting data from local memory
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     self.likedTilekterNames = [[NSMutableArray alloc] initWithArray:[userDefaults objectForKey:@"likedTilekterNames"]];
     self.likedTilekterDescr = [[NSMutableArray alloc] initWithArray:[userDefaults objectForKey:@"likedTilekterDescr"]];
     if ([self.likedTilekterNames count] == 0) {
-        
         self.likedTilekterNames = [NSMutableArray new];
         self.likedTilekterDescr = [NSMutableArray new];
     }
@@ -59,19 +61,21 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     self.likedTilekterNames = [[NSMutableArray alloc] initWithArray:[userDefaults objectForKey:@"likedTilekterNames"]];
     self.likedTilekterDescr = [[NSMutableArray alloc] initWithArray:[userDefaults objectForKey:@"likedTilekterDescr"]];
+    [self.view addSubview:self.placeHolderText];
+    self.placeHolderText.hidden = YES;
+    NSLog(@"%i", (int)self.likedTilekterNames.count);
     if ([self.likedTilekterNames count] == 0) {
         /*
         UIImageView *placeHolder = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.view.frame)/2 - 65, CGRectGetHeight(self.view.frame)/2 - 50, 75, 75)];
         placeHolder.image = [UIImage imageNamed:@"starGray.png"];
         [self.view addSubview:placeHolder];
         */
-        
-        UILabel *placeHolderText = [[UILabel alloc] initWithFrame:CGRectMake(30, CGRectGetHeight(self.view.frame)/2, CGRectGetWidth(self.view.frame)-30, 30)];
-        placeHolderText.text = @" Ұнатқан тілектеріңіз жоқ";
-        [placeHolderText setFont:[UIFont fontWithName:@"Helvetica-Light" size:20]];
-        placeHolderText.textColor = [UIColor grayColor];
-        [self.view addSubview:placeHolderText];
-        
+
+        self.placeHolderText.text = @" Ұнатқан тілектеріңіз жоқ";
+        self.placeHolderText.textAlignment = UITextAlignmentCenter;
+        [self.placeHolderText setFont:[UIFont fontWithName:@"Helvetica-Light" size:20]];
+        self.placeHolderText.textColor = [UIColor grayColor];
+        self.placeHolderText.hidden = NO;
         self.likedTilekterNames = [NSMutableArray new];
         self.likedTilekterDescr = [NSMutableArray new];
     }

@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     //setting up the backgound
-    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
     backgroundView.image = [UIImage imageNamed:@"tilekBackground.png"];
     [self.view insertSubview:backgroundView atIndex:0];
     //end

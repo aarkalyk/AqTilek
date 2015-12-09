@@ -19,6 +19,7 @@
 @property (nonatomic) Tilek *tilek;
 @property (nonatomic) UIColor *customPuprle;
 @property (nonatomic) NSArray *hudTexts;
+@property JGProgressHUD *HUD;
 
 @end
 
@@ -27,13 +28,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //
+    self.HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleExtraLight];
     self.hudTexts = [[NSArray alloc] initWithObjects:@"Eң бастысы - шын жүректен айту :)", @"Айтар тілегіңіз қабыл болсын!", @"Жауынменен жер көгерер, батаменен ер көгерер", nil];
     NSLog(@"%i - index", self.hudIndex);
     
     self.customPuprle = [UIColor colorWithRed:209/255.0 green:138/255.0 blue:206/255.0 alpha:0.7];
     
     //setting up the backgound
-    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
     backgroundView.image = [UIImage imageNamed:@"tilekBackground.png"];
     [self.view insertSubview:backgroundView atIndex:0];
     //end
@@ -66,15 +68,9 @@
 
 #pragma mark - Parse methods
 -(void) getDataFromParse{
-    NSLog(@"hey hey hey");
     PFQuery *query = [PFQuery queryWithClassName:self.subCategoryName];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error) {
-            JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleExtraLight];
-            if ([self.tilekter count] == 0) {
-                HUD.textLabel.text = self.hudTexts[self.hudIndex];
-                [HUD showInView:self.view];
-            }
             for (PFObject *object in objects) {
                 NSString *name = object[@"name"];
                 NSString *descr = object[@"descr"];
@@ -93,9 +89,31 @@
                 }
                 [self.onlineTilekter addObject:tilek];
             }
-            [self updateLocalData];
-            [HUD dismissAnimated:YES];
+            for (int i = 0; i < (int)self.tilekter.count; i++) {
+                BOOL exists = false;
+                for (int j = 0; j < (int)self.onlineTilekter.count; j++) {
+                    Tilek *localTilek = self.tilekter[i];
+                    Tilek *onlineTilek = self.onlineTilekter[j];
+                    if ([localTilek.name isEqualToString:onlineTilek.name] && [localTilek.descr isEqualToString:onlineTilek.descr]) {
+                        exists = true;
+                    }
+                }
+                if (!exists) {
+                    for (PFObject *object in objects) {
+                        Tilek *localTilek = self.tilekter[i];
+                        NSString *name = localTilek.name;
+                        if ([object[@"name"] isEqualToString:name]) {
+                            [object unpinInBackground];
+                            break;
+                        }
+                    }
+                    [self.tilekter removeObjectAtIndex:i];
+                    [self.collectionView reloadData];
+                }
+            }
+            [self.HUD dismissAnimated:YES];
         }else{
+            [self.HUD dismissAnimated:YES];
             NSLog(@"%@", error);
         }
     }];
@@ -113,29 +131,16 @@
                 [self.tilekter addObject:tilek];
                 [self.collectionView reloadData];
             }
+            if ([self.tilekter count] == 0) {
+                self.HUD.textLabel.text = self.hudTexts[self.hudIndex];
+                [self.HUD showInView:self.view];
+            }
         }else{
             NSLog(@"%@", error);
         }
     }];
 }
 
--(void) updateLocalData{
-    for (int i = 0; i < (int)self.tilekter.count; i++) {
-        BOOL exists = false;
-        for (int j = 0; j < (int)self.onlineTilekter.count; j++) {
-            Tilek *localTilek = self.tilekter[i];
-            Tilek *onlineTilek = self.onlineTilekter[j];
-            if ([localTilek.name isEqualToString:onlineTilek.name] && [localTilek.descr isEqualToString:onlineTilek.descr]) {
-                exists = true;
-            }
-        }
-        NSLog(@"%hhd: exists", exists);
-        if (!exists) {
-            [self.tilekter removeObjectAtIndex:i];
-            [self.collectionView reloadData];
-        }
-    }
-}
 
 #pragma mark - Collectionview delegate
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

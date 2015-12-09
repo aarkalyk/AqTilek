@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.navigationItem setTitle:@"Offers"];
+    [self.navigationItem setTitle:@"Пайдалы ақпарат"];
     
     self.offers = [NSMutableArray new];
     
@@ -44,12 +44,12 @@
 
 #pragma mark - Parse methods
 -(void) getDataFromParse{
+    JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleExtraLight];
+    HUD.textLabel.text = @"Біздің ұсыныстар тек қана сіз үшін!";
+    [HUD showInView:self.view];
     PFQuery *query = [PFQuery queryWithClassName:@"Offers"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error) {
-            JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleExtraLight];
-            HUD.textLabel.text = @"Біздің ұсыныстар тек қана сіз үшін!";
-            [HUD showInView:self.view];
             for (PFObject *object in objects) {
                 NSString *name = object[@"name"];
                 NSString *descr = object[@"descr"];
@@ -58,13 +58,15 @@
                 PFFile *file = object[@"image"];
                 [file getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
                     UIImage *image = [UIImage imageWithData:data];
-                    Offer *offer = [[Offer alloc] initWithName:name andDescr:descr andImage:image andURL:link];
+                    Offer *offer = [[Offer alloc] initWithName:name andDescr:descr andImage:image andURL:link
+                        ];
+                    [HUD dismissAnimated:YES];
                     [self.offers addObject:offer];
                     [self.collectionView reloadData];
                 }];
             }
-            [HUD dismissAnimated:YES];
         }else{
+            [HUD dismissAnimated:YES];
             NSLog(@"%@", error);
         }
     }];

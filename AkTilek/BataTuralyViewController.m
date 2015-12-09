@@ -20,7 +20,7 @@
     [super viewDidLoad];
     [self.navigationItem setTitle:@"Бата беру туралы"];
     
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
     backgroundImageView.image = [UIImage imageNamed:@"tilekBackground.png"];
     [self.view addSubview:backgroundImageView];
     
@@ -47,7 +47,7 @@
             for (PFObject *object in objects) {
                 NSString *name = object[@"name"];
                 NSString *descr = object[@"descr"];
-                if (name != self.bataName && [name isEqualToString:@"Bata Turaly"]) {
+                if (![descr isEqualToString:self.textView.text] && [name isEqualToString:@"Bata Turaly"]) {
                     self.textView.text = descr;
                     self.bataName = name;
                     [object pinInBackground];
