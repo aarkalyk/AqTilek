@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51F231AB1CA7F196B183C7C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 839BCCDD0FD82C882217E7D2 /* libPods.a */; };
+		7935E9F41BF8770A00917299 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7935E9F31BF8770A00917299 /* AboutViewController.m */; };
 		793B85941BF11DA700D18B74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85931BF11DA700D18B74 /* main.m */; };
 		793B85971BF11DA700D18B74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85961BF11DA700D18B74 /* AppDelegate.m */; };
 		793B859A1BF11DA700D18B74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85991BF11DA700D18B74 /* ViewController.m */; };
@@ -16,6 +18,34 @@
 		793B85A51BF11DA700D18B74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 793B85A31BF11DA700D18B74 /* LaunchScreen.storyboard */; };
 		793B85B01BF11DA700D18B74 /* AkTilekTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85AF1BF11DA700D18B74 /* AkTilekTests.m */; };
 		793B85BB1BF11DA700D18B74 /* AkTilekUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85BA1BF11DA700D18B74 /* AkTilekUITests.m */; };
+		793B85CA1BF11F5300D18B74 /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85C91BF11F5300D18B74 /* CategoryCollectionViewCell.m */; };
+		793B85CF1BF1AF0300D18B74 /* SubCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85CE1BF1AF0300D18B74 /* SubCategoriesViewController.m */; };
+		793B85D21BF1B11B00D18B74 /* SubCategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85D11BF1B11B00D18B74 /* SubCategoryCollectionViewCell.m */; };
+		793B85D51BF1C5E400D18B74 /* TilekterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85D41BF1C5E400D18B74 /* TilekterViewController.m */; };
+		793B85D71BF1CC7200D18B74 /* PodFile in Resources */ = {isa = PBXBuildFile; fileRef = 793B85D61BF1CC7200D18B74 /* PodFile */; };
+		793B85DA1BF1D12E00D18B74 /* Tilek.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85D91BF1D12E00D18B74 /* Tilek.m */; };
+		793B85DD1BF1D84B00D18B74 /* TilekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793B85DC1BF1D84B00D18B74 /* TilekViewController.m */; };
+		7940F3D91BF21EE50094DEA9 /* LikedTilekterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7940F3D81BF21EE50094DEA9 /* LikedTilekterViewController.m */; };
+		7969A01B1C0DB190009B6E87 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7969A01A1C0DB190009B6E87 /* Logo.png */; };
+		79D8BB771C14391C00C61532 /* BataTuralyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D8BB761C14391C00C61532 /* BataTuralyViewController.m */; };
+		79E9BBA51C01AD0C001DC998 /* AdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E9BBA41C01AD0B001DC998 /* AdsViewController.m */; };
+		79E9BBA71C01AE8A001DC998 /* homePurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBA61C01AE8A001DC998 /* homePurple.png */; };
+		79E9BBA91C01AEA4001DC998 /* aboutPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBA81C01AEA4001DC998 /* aboutPurple.png */; };
+		79E9BBAD1C01AED9001DC998 /* starYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBAC1C01AED9001DC998 /* starYellow.png */; };
+		79E9BBAF1C01AEF7001DC998 /* starGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBAE1C01AEF7001DC998 /* starGray.png */; };
+		79E9BBB11C01AF08001DC998 /* starPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBB01C01AF08001DC998 /* starPurple.png */; };
+		79E9BBB31C01AF90001DC998 /* starWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBB21C01AF90001DC998 /* starWhite.png */; };
+		79E9BBB51C01B243001DC998 /* homeWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBB41C01B243001DC998 /* homeWhite.png */; };
+		79E9BBBF1C01B677001DC998 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBBE1C01B677001DC998 /* background.png */; };
+		79E9BBC11C01B798001DC998 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBC01C01B798001DC998 /* image.png */; };
+		79E9BBC31C01BB1A001DC998 /* tilekBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBC21C01BB1A001DC998 /* tilekBackground.png */; };
+		79E9BBC51C01BD03001DC998 /* aboutWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBC41C01BD03001DC998 /* aboutWhite.png */; };
+		79E9BBC81C01CFFC001DC998 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E9BBC71C01CFFC001DC998 /* InitialViewController.m */; };
+		79E9BBCA1C01D0A4001DC998 /* backgroundColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBC91C01D0A4001DC998 /* backgroundColor.png */; };
+		79E9BBCC1C01D2EA001DC998 /* initialLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBCB1C01D2EA001DC998 /* initialLogo.png */; };
+		79E9BBCE1C01D405001DC998 /* bottomOrnament.png in Resources */ = {isa = PBXBuildFile; fileRef = 79E9BBCD1C01D405001DC998 /* bottomOrnament.png */; };
+		79E9BBD71C047AF3001DC998 /* AdsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E9BBD61C047AF3001DC998 /* AdsCollectionViewCell.m */; };
+		79E9BBDA1C04860C001DC998 /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E9BBD91C04860C001DC998 /* Offer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7935E9F21BF8770A00917299 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		7935E9F31BF8770A00917299 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		793B858F1BF11DA700D18B74 /* AkTilek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkTilek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		793B85931BF11DA700D18B74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		793B85951BF11DA700D18B74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +85,49 @@
 		793B85B61BF11DA700D18B74 /* AkTilekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AkTilekUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		793B85BA1BF11DA700D18B74 /* AkTilekUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AkTilekUITests.m; sourceTree = "<group>"; };
 		793B85BC1BF11DA700D18B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		793B85C81BF11F5300D18B74 /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		793B85C91BF11F5300D18B74 /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCollectionViewCell.m; sourceTree = "<group>"; };
+		793B85CD1BF1AF0300D18B74 /* SubCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoriesViewController.h; sourceTree = "<group>"; };
+		793B85CE1BF1AF0300D18B74 /* SubCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoriesViewController.m; sourceTree = "<group>"; };
+		793B85D01BF1B11B00D18B74 /* SubCategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		793B85D11BF1B11B00D18B74 /* SubCategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoryCollectionViewCell.m; sourceTree = "<group>"; };
+		793B85D31BF1C5E400D18B74 /* TilekterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilekterViewController.h; sourceTree = "<group>"; };
+		793B85D41BF1C5E400D18B74 /* TilekterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilekterViewController.m; sourceTree = "<group>"; };
+		793B85D61BF1CC7200D18B74 /* PodFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PodFile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		793B85D81BF1D12E00D18B74 /* Tilek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tilek.h; sourceTree = "<group>"; };
+		793B85D91BF1D12E00D18B74 /* Tilek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tilek.m; sourceTree = "<group>"; };
+		793B85DB1BF1D84B00D18B74 /* TilekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilekViewController.h; sourceTree = "<group>"; };
+		793B85DC1BF1D84B00D18B74 /* TilekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilekViewController.m; sourceTree = "<group>"; };
+		7940F3D71BF21EE50094DEA9 /* LikedTilekterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikedTilekterViewController.h; sourceTree = "<group>"; };
+		7940F3D81BF21EE50094DEA9 /* LikedTilekterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikedTilekterViewController.m; sourceTree = "<group>"; };
+		7969A01A1C0DB190009B6E87 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		79D8BB751C14391C00C61532 /* BataTuralyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BataTuralyViewController.h; sourceTree = "<group>"; };
+		79D8BB761C14391C00C61532 /* BataTuralyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BataTuralyViewController.m; sourceTree = "<group>"; };
+		79E9BBA31C01AD0B001DC998 /* AdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsViewController.h; sourceTree = "<group>"; };
+		79E9BBA41C01AD0B001DC998 /* AdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsViewController.m; sourceTree = "<group>"; };
+		79E9BBA61C01AE8A001DC998 /* homePurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homePurple.png; sourceTree = "<group>"; };
+		79E9BBA81C01AEA4001DC998 /* aboutPurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutPurple.png; sourceTree = "<group>"; };
+		79E9BBAC1C01AED9001DC998 /* starYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starYellow.png; sourceTree = "<group>"; };
+		79E9BBAE1C01AEF7001DC998 /* starGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starGray.png; sourceTree = "<group>"; };
+		79E9BBB01C01AF08001DC998 /* starPurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starPurple.png; sourceTree = "<group>"; };
+		79E9BBB21C01AF90001DC998 /* starWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starWhite.png; sourceTree = "<group>"; };
+		79E9BBB41C01B243001DC998 /* homeWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeWhite.png; sourceTree = "<group>"; };
+		79E9BBBE1C01B677001DC998 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		79E9BBC01C01B798001DC998 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		79E9BBC21C01BB1A001DC998 /* tilekBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tilekBackground.png; sourceTree = "<group>"; };
+		79E9BBC41C01BD03001DC998 /* aboutWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutWhite.png; sourceTree = "<group>"; };
+		79E9BBC61C01CFFC001DC998 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		79E9BBC71C01CFFC001DC998 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
+		79E9BBC91C01D0A4001DC998 /* backgroundColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundColor.png; sourceTree = "<group>"; };
+		79E9BBCB1C01D2EA001DC998 /* initialLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = initialLogo.png; sourceTree = "<group>"; };
+		79E9BBCD1C01D405001DC998 /* bottomOrnament.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomOrnament.png; sourceTree = "<group>"; };
+		79E9BBD51C047AF3001DC998 /* AdsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsCollectionViewCell.h; sourceTree = "<group>"; };
+		79E9BBD61C047AF3001DC998 /* AdsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsCollectionViewCell.m; sourceTree = "<group>"; };
+		79E9BBD81C04860C001DC998 /* Offer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Offer.h; sourceTree = "<group>"; };
+		79E9BBD91C04860C001DC998 /* Offer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Offer.m; sourceTree = "<group>"; };
+		839BCCDD0FD82C882217E7D2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1241A7A60D03E3EB5B4D789 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		ED3118C35FF775E68438364A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F231AB1CA7F196B183C7C1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,13 +156,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1A230544711A2E75C40B08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				839BCCDD0FD82C882217E7D2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7935E9EF1BF8765900917299 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				793B85981BF11DA700D18B74 /* ViewController.h */,
+				793B85991BF11DA700D18B74 /* ViewController.m */,
+				793B85CD1BF1AF0300D18B74 /* SubCategoriesViewController.h */,
+				793B85CE1BF1AF0300D18B74 /* SubCategoriesViewController.m */,
+				793B85DB1BF1D84B00D18B74 /* TilekViewController.h */,
+				793B85DC1BF1D84B00D18B74 /* TilekViewController.m */,
+				7940F3D71BF21EE50094DEA9 /* LikedTilekterViewController.h */,
+				7940F3D81BF21EE50094DEA9 /* LikedTilekterViewController.m */,
+				793B85D31BF1C5E400D18B74 /* TilekterViewController.h */,
+				793B85D41BF1C5E400D18B74 /* TilekterViewController.m */,
+				7935E9F21BF8770A00917299 /* AboutViewController.h */,
+				7935E9F31BF8770A00917299 /* AboutViewController.m */,
+				79E9BBA31C01AD0B001DC998 /* AdsViewController.h */,
+				79E9BBA41C01AD0B001DC998 /* AdsViewController.m */,
+				79E9BBC61C01CFFC001DC998 /* InitialViewController.h */,
+				79E9BBC71C01CFFC001DC998 /* InitialViewController.m */,
+				79D8BB751C14391C00C61532 /* BataTuralyViewController.h */,
+				79D8BB761C14391C00C61532 /* BataTuralyViewController.m */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		7935E9F01BF8769600917299 /* Custom cells */ = {
+			isa = PBXGroup;
+			children = (
+				793B85C81BF11F5300D18B74 /* CategoryCollectionViewCell.h */,
+				793B85C91BF11F5300D18B74 /* CategoryCollectionViewCell.m */,
+				793B85D01BF1B11B00D18B74 /* SubCategoryCollectionViewCell.h */,
+				793B85D11BF1B11B00D18B74 /* SubCategoryCollectionViewCell.m */,
+				79E9BBD51C047AF3001DC998 /* AdsCollectionViewCell.h */,
+				79E9BBD61C047AF3001DC998 /* AdsCollectionViewCell.m */,
+			);
+			name = "Custom cells";
+			sourceTree = "<group>";
+		};
+		7935E9F11BF876A800917299 /* NSObjects */ = {
+			isa = PBXGroup;
+			children = (
+				793B85D81BF1D12E00D18B74 /* Tilek.h */,
+				793B85D91BF1D12E00D18B74 /* Tilek.m */,
+				79E9BBD81C04860C001DC998 /* Offer.h */,
+				79E9BBD91C04860C001DC998 /* Offer.m */,
+			);
+			name = NSObjects;
+			sourceTree = "<group>";
+		};
 		793B85861BF11DA700D18B74 = {
 			isa = PBXGroup;
 			children = (
+				793B85D61BF1CC7200D18B74 /* PodFile */,
 				793B85911BF11DA700D18B74 /* AkTilek */,
 				793B85AE1BF11DA700D18B74 /* AkTilekTests */,
 				793B85B91BF11DA700D18B74 /* AkTilekUITests */,
 				793B85901BF11DA700D18B74 /* Products */,
+				7BB9DC2627CFAFCEBA2889C9 /* Pods */,
+				1A1A230544711A2E75C40B08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,8 +241,9 @@
 			children = (
 				793B85951BF11DA700D18B74 /* AppDelegate.h */,
 				793B85961BF11DA700D18B74 /* AppDelegate.m */,
-				793B85981BF11DA700D18B74 /* ViewController.h */,
-				793B85991BF11DA700D18B74 /* ViewController.m */,
+				7935E9EF1BF8765900917299 /* View controllers */,
+				7935E9F01BF8769600917299 /* Custom cells */,
+				7935E9F11BF876A800917299 /* NSObjects */,
 				793B859B1BF11DA700D18B74 /* Main.storyboard */,
 				793B85A11BF11DA700D18B74 /* Assets.xcassets */,
 				793B85A31BF11DA700D18B74 /* LaunchScreen.storyboard */,
@@ -120,6 +257,21 @@
 		793B85921BF11DA700D18B74 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7969A01A1C0DB190009B6E87 /* Logo.png */,
+				79E9BBCD1C01D405001DC998 /* bottomOrnament.png */,
+				79E9BBCB1C01D2EA001DC998 /* initialLogo.png */,
+				79E9BBC91C01D0A4001DC998 /* backgroundColor.png */,
+				79E9BBC41C01BD03001DC998 /* aboutWhite.png */,
+				79E9BBC21C01BB1A001DC998 /* tilekBackground.png */,
+				79E9BBC01C01B798001DC998 /* image.png */,
+				79E9BBBE1C01B677001DC998 /* background.png */,
+				79E9BBB41C01B243001DC998 /* homeWhite.png */,
+				79E9BBB21C01AF90001DC998 /* starWhite.png */,
+				79E9BBB01C01AF08001DC998 /* starPurple.png */,
+				79E9BBAE1C01AEF7001DC998 /* starGray.png */,
+				79E9BBAC1C01AED9001DC998 /* starYellow.png */,
+				79E9BBA81C01AEA4001DC998 /* aboutPurple.png */,
+				79E9BBA61C01AE8A001DC998 /* homePurple.png */,
 				793B85931BF11DA700D18B74 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -143,6 +295,15 @@
 			path = AkTilekUITests;
 			sourceTree = "<group>";
 		};
+		7BB9DC2627CFAFCEBA2889C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1241A7A60D03E3EB5B4D789 /* Pods.debug.xcconfig */,
+				ED3118C35FF775E68438364A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 793B85BF1BF11DA700D18B74 /* Build configuration list for PBXNativeTarget "AkTilek" */;
 			buildPhases = (
+				0C9A49D880926E0465A8488D /* Check Pods Manifest.lock */,
 				793B858B1BF11DA700D18B74 /* Sources */,
 				793B858C1BF11DA700D18B74 /* Frameworks */,
 				793B858D1BF11DA700D18B74 /* Resources */,
+				FF7FC6E87FE481DEE89CC30F /* Embed Pods Frameworks */,
+				19C5E154C58DC9B867FE9D64 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +374,7 @@
 				TargetAttributes = {
 					793B858E1BF11DA700D18B74 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 8LJNVAPE29;
 					};
 					793B85AA1BF11DA700D18B74 = {
 						CreatedOnToolsVersion = 7.1;
@@ -246,8 +411,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E9BBC51C01BD03001DC998 /* aboutWhite.png in Resources */,
+				793B85D71BF1CC7200D18B74 /* PodFile in Resources */,
+				79E9BBB11C01AF08001DC998 /* starPurple.png in Resources */,
+				79E9BBCE1C01D405001DC998 /* bottomOrnament.png in Resources */,
+				79E9BBA71C01AE8A001DC998 /* homePurple.png in Resources */,
 				793B85A51BF11DA700D18B74 /* LaunchScreen.storyboard in Resources */,
+				79E9BBCA1C01D0A4001DC998 /* backgroundColor.png in Resources */,
+				79E9BBC31C01BB1A001DC998 /* tilekBackground.png in Resources */,
+				79E9BBBF1C01B677001DC998 /* background.png in Resources */,
+				79E9BBAD1C01AED9001DC998 /* starYellow.png in Resources */,
+				79E9BBAF1C01AEF7001DC998 /* starGray.png in Resources */,
+				79E9BBCC1C01D2EA001DC998 /* initialLogo.png in Resources */,
+				79E9BBB31C01AF90001DC998 /* starWhite.png in Resources */,
+				79E9BBC11C01B798001DC998 /* image.png in Resources */,
 				793B85A21BF11DA700D18B74 /* Assets.xcassets in Resources */,
+				7969A01B1C0DB190009B6E87 /* Logo.png in Resources */,
+				79E9BBA91C01AEA4001DC998 /* aboutPurple.png in Resources */,
+				79E9BBB51C01B243001DC998 /* homeWhite.png in Resources */,
 				793B859D1BF11DA700D18B74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,15 +449,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C9A49D880926E0465A8488D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		19C5E154C58DC9B867FE9D64 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF7FC6E87FE481DEE89CC30F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		793B858B1BF11DA700D18B74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793B85DA1BF1D12E00D18B74 /* Tilek.m in Sources */,
+				793B85CA1BF11F5300D18B74 /* CategoryCollectionViewCell.m in Sources */,
+				793B85DD1BF1D84B00D18B74 /* TilekViewController.m in Sources */,
+				7940F3D91BF21EE50094DEA9 /* LikedTilekterViewController.m in Sources */,
+				79E9BBDA1C04860C001DC998 /* Offer.m in Sources */,
 				793B859A1BF11DA700D18B74 /* ViewController.m in Sources */,
+				79E9BBC81C01CFFC001DC998 /* InitialViewController.m in Sources */,
 				793B85A01BF11DA700D18B74 /* AkTilek.xcdatamodeld in Sources */,
+				7935E9F41BF8770A00917299 /* AboutViewController.m in Sources */,
 				793B85971BF11DA700D18B74 /* AppDelegate.m in Sources */,
+				793B85D21BF1B11B00D18B74 /* SubCategoryCollectionViewCell.m in Sources */,
+				79E9BBD71C047AF3001DC998 /* AdsCollectionViewCell.m in Sources */,
+				79D8BB771C14391C00C61532 /* BataTuralyViewController.m in Sources */,
+				79E9BBA51C01AD0C001DC998 /* AdsViewController.m in Sources */,
 				793B85941BF11DA700D18B74 /* main.m in Sources */,
+				793B85D51BF1C5E400D18B74 /* TilekterViewController.m in Sources */,
+				793B85CF1BF1AF0300D18B74 /* SubCategoriesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,9 +655,12 @@
 		};
 		793B85C01BF11DA700D18B74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1241A7A60D03E3EB5B4D789 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AkTilek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grownapps.AkTilek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,9 +669,12 @@
 		};
 		793B85C11BF11DA700D18B74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED3118C35FF775E68438364A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AkTilek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grownapps.AkTilek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +748,7 @@
 				793B85C11BF11DA700D18B74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		793B85C21BF11DA700D18B74 /* Build configuration list for PBXNativeTarget "AkTilekTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +757,7 @@
 				793B85C41BF11DA700D18B74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		793B85C51BF11DA700D18B74 /* Build configuration list for PBXNativeTarget "AkTilekUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +766,7 @@
 				793B85C71BF11DA700D18B74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

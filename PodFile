@@ -1,0 +1,4 @@
+pod 'Parse'
+platform :ios, '9.0'
+pod 'UICollectionViewLeftAlignedLayout'
+pod 'JGProgressHUD'

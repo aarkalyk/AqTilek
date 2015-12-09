@@ -6,7 +6,9 @@
 //  Copyright © 2015 GrownApps. All rights reserved.
 //
 
+#import "ViewController.h"
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -16,6 +18,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [Parse enableLocalDatastore];
+    
+     // Initialize Parse.
+     [Parse setApplicationId:@"ggvFhQKSPoTIpBXVg2vkwezIZJffOGa4ZrIUsr6j"
+     clientKey:@"8YFWtrHA3YfL5wNqYifz2KeFH2BgEC4LZ5F3jJZs"];
+    
+    
+    ViewController* mainController = (ViewController*)  self.window.rootViewController;
+    
+    float width = CGRectGetWidth(mainController.view.frame);
+    
+    // set the selected icon color
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
+    // remove the shadow
+    [[UITabBar appearance] setShadowImage:nil];
+    
+    // Set the dark color to selected tab (the dimmed background)
+    [[UITabBar appearance] setSelectionIndicatorImage:[AppDelegate imageFromColor:[UIColor whiteColor] forSize:CGSizeMake(width/3.0f, 49) withCornerRadius:0]];
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -42,6 +65,37 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
+#pragma mark - Helper methods
++ (UIImage *)imageFromColor:(UIColor *)color forSize:(CGSize)size withCornerRadius:(CGFloat)radius
+{
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    // Begin a new image that will be the new image with the rounded corners
+    // (here with the size of an UIImageView)
+    UIGraphicsBeginImageContext(size);
+    
+    // Add a clip before drawing anything, in the shape of an rounded rect
+    [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius] addClip];
+    // Draw your image
+    [image drawInRect:rect];
+    
+    // Get the image, here setting the UIImageView image
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // Lets forget about that we were drawing
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 #pragma mark - Core Data stack
