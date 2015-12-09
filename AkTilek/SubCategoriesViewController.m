@@ -28,6 +28,7 @@
 @property (nonatomic) NSString *subCategoryNameKaz;
 @property (nonatomic) UIColor *customPuprle;
 
+
 @end
 
 @implementation SubCategoriesViewController
@@ -107,7 +108,6 @@
                 if (!exists) {
                     [self.mainArray addObject:nameEng];
                     [self.mainArrayKaz addObject:nameKaz];
-                    [self.collectionView reloadData];
                     [object pinInBackground];
                 }
             }
@@ -128,8 +128,8 @@
                 NSString *nameEng = object[@"nameEng"];
                 [self.mainArray addObject:nameEng];
                 [self.mainArrayKaz addObject:nameKaz];
-                [self.collectionView reloadData];
             }
+            [self.collectionView reloadData];
         }else{
             NSLog(@"%@", error);
         }
@@ -152,6 +152,7 @@
             [self.mainArrayKaz removeObjectAtIndex:i];
         }
     }
+    [self.collectionView reloadData];
 }
 
 #pragma mark - CollectionView delegate
@@ -165,8 +166,11 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     SubCategoryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    if ([self.categoryName isEqualToString:@"Batas"] && [self.mainArray[indexPath.row] isEqualToString:@"BataTuraly"]){
+    if ([self.categoryName isEqualToString:@"Batas"] && indexPath.row == 0){
+        NSLog(@"%@ -- ", self.mainArray[indexPath.row]);
         cell.starImageView.image = [UIImage imageNamed:@"starPurple.png"];
+    }else{
+        cell.starImageView.image = [UIImage imageNamed:@""];
     }
     
     cell.nameLabel.text = self.mainArrayKaz[indexPath.row];
@@ -175,6 +179,7 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%@ -- ", self.mainArray[indexPath.row]);
     if (indexPath.row == 0 && [self.categoryName isEqualToString:@"Batas"]) {
         self.subCategoryName = self.mainArray[indexPath.row];
         self.subCategoryNameKaz = self.mainArrayKaz[indexPath.row];
