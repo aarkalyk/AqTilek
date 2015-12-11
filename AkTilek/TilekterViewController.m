@@ -89,28 +89,8 @@
                 }
                 [self.onlineTilekter addObject:tilek];
             }
-            for (int i = 0; i < (int)self.tilekter.count; i++) {
-                BOOL exists = false;
-                for (int j = 0; j < (int)self.onlineTilekter.count; j++) {
-                    Tilek *localTilek = self.tilekter[i];
-                    Tilek *onlineTilek = self.onlineTilekter[j];
-                    if ([localTilek.name isEqualToString:onlineTilek.name] && [localTilek.descr isEqualToString:onlineTilek.descr]) {
-                        exists = true;
-                    }
-                }
-                if (!exists) {
-                    for (PFObject *object in objects) {
-                        Tilek *localTilek = self.tilekter[i];
-                        NSString *name = localTilek.name;
-                        if ([object[@"name"] isEqualToString:name]) {
-                            [object unpinInBackground];
-                            break;
-                        }
-                    }
-                    [self.tilekter removeObjectAtIndex:i];
-                    [self.collectionView reloadData];
-                }
-            }
+            
+            [self updateLocalData];
             [self.HUD dismissAnimated:YES];
         }else{
             [self.HUD dismissAnimated:YES];
@@ -138,6 +118,40 @@
         }else{
             NSLog(@"%@", error);
         }
+    }];
+}
+
+-(void) updateLocalData{
+    PFQuery *query = [PFQuery queryWithClassName:self.subCategoryName];
+    [query fromLocalDatastore];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (!error) {
+            for (int i = 0; i < (int)self.tilekter.count; i++) {
+                BOOL exists = false;
+                for (int j = 0; j < (int)self.onlineTilekter.count; j++) {
+                    Tilek *localTilek = self.tilekter[i];
+                    Tilek *onlineTilek = self.onlineTilekter[j];
+                    if ([localTilek.name isEqualToString:onlineTilek.name] && [localTilek.descr isEqualToString:onlineTilek.descr]) {
+                        exists = true;
+                    }
+                }
+                if (!exists) {
+                    for (PFObject *object in objects) {
+                        Tilek *localTilek = self.tilekter[i];
+                        NSString *name = localTilek.name;
+                        if ([object[@"name"] isEqualToString:name]) {
+                            [object unpinInBackground];
+                            break;
+                        }
+                    }
+                    [self.tilekter removeObjectAtIndex:i];
+                    [self.collectionView reloadData];
+                }
+            }
+        }else{
+            NSLog(@"%@", error);
+        }
+        [self.collectionView reloadData];
     }];
 }
 

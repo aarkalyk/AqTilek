@@ -46,7 +46,7 @@
     
     [self.navigationItem setTitle:self.categoryNameKaz];
     
-    self.Lifetime = [[NSArray alloc] initWithObjects:@"Shildekhana", @"Besik", @"Sundet", @"Tusaukeser", @"Tilashar", @"SchoolCollege", @"SyrgaTagu", @"Kudalyk", @"Qyz uzatu", @"Wedding", @"Konys", @"KumisToy", @"AltynToy", @"Brithday", @"ToyOwner", nil];
+    self.Lifetime = [[NSArray alloc] initWithObjects:@"Shildekhana", @"Besik", @"Sundet", @"Tusaukeser", @"Tilashar", @"SchoolCollege", @"SyrgaTagu", @"Kudalyk", @"QyzUzatu", @"Wedding", @"Konys", @"KumisToy", @"AltynToy", @"Brithday", @"ToyOwner", nil];
     self.National = [[NSArray alloc] initWithObjects:@"NewYear", @"WomensDay", @"Nauryz", @"Kurban", @"NationUnionDay", @"ConstitutionDay", @"VictoryDay", @"DefendersDay", @"IndependenceDay", nil];
     self.Batas = [[NSArray alloc] initWithObjects:@"Sadaqa", @"Sundet", nil];
     self.LifetimeKaz = [[NSArray alloc] initWithObjects:@"Шілдехана", @"Бесік тойы", @"Сүндет той", @"Тұсаукесер", @"Тілашар", @"Мектеп/Университет түлегі тойы", @"Сырға тағу", @"Құдалық", @"Қыз ұзату", @"Үйлену тойы", @"Қоныс тойы", @"Күміс Той", @"Алтын Той", @"Туған күн", @"Той иесінің сөзі", nil];
@@ -111,28 +111,6 @@
                     [object pinInBackground];
                 }
             }
-            for (int i = 1; i < (int)self.mainArray.count; i++) {
-                BOOL exists = NO;
-                for (int j = 0; j < (int)self.onlineBatalar.count; j++) {
-                    NSString *localName = self.mainArray[i];
-                    NSString *onlineName = self.onlineBatalar[j];
-                    if ([localName isEqualToString:onlineName]) {
-                        exists = YES;
-                        break;
-                    }
-                }
-                if (!exists) {
-                    for (PFObject *object in objects) {
-                        NSString *nameEng = self.mainArray[i];
-                        if ([nameEng isEqualToString:object[@"nameEng"]]) {
-                            [object unpinInBackground];
-                        }
-                    }
-                    [self.mainArray removeObjectAtIndex:i];
-                    [self.mainArrayKaz removeObjectAtIndex:i];
-                }
-            }
-            [self.collectionView reloadData];
         }else{
             NSLog(@"%@", error);
         }
@@ -154,6 +132,39 @@
         }else{
             NSLog(@"%@", error);
         }
+    }];
+}
+
+-(void) updateLocalData{
+    PFQuery *query = [PFQuery queryWithClassName:@"BataCategories"];
+    [query fromLocalDatastore];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (!error) {
+            for (int i = 1; i < (int)self.mainArray.count; i++) {
+                BOOL exists = NO;
+                for (int j = 0; j < (int)self.onlineBatalar.count; j++) {
+                    NSString *localName = self.mainArray[i];
+                    NSString *onlineName = self.onlineBatalar[j];
+                    if ([localName isEqualToString:onlineName]) {
+                        exists = YES;
+                        break;
+                    }
+                }
+                if (!exists) {
+                    for (PFObject *object in objects) {
+                        NSString *nameEng = self.mainArray[i];
+                        if ([nameEng isEqualToString:object[@"nameEng"]]) {
+                            [object unpinInBackground];
+                        }
+                    }
+                    [self.mainArray removeObjectAtIndex:i];
+                    [self.mainArrayKaz removeObjectAtIndex:i];
+                }
+            }
+        }else{
+            NSLog(@"%@", error);
+        }
+        [self.collectionView reloadData];
     }];
 }
 
