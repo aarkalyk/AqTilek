@@ -111,6 +111,8 @@
                     [object pinInBackground];
                 }
             }
+            
+            [self updateLocalData];
         }else{
             NSLog(@"%@", error);
         }
